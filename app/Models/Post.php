@@ -22,4 +22,8 @@ class Post extends Model
     }
     protected $fillable = ['uuid','title','body','slug','teaser','published'];
 
+    public function PostComment()
+    {
+        return $this->hasMany(PostComment::class);
+    }
 }
